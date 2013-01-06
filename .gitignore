@@ -1,0 +1,4 @@
+bin/*
+src/include/*.inc
+src/dyn*
+share/docs/JavaScriptCore
