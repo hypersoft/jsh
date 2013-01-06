@@ -8,12 +8,13 @@ be patient while we see to important matters such as licensing and initial code
 uploads.
 
 #### Introduction
-Jsh is a JavaScript Shell written in C by [Triston J. Taylor](https://facebook.com/pc.wiz.tt)
-for GNU/Linux style Unix systems. The shell is designed for Unix style systems 
-on the premise, that the lead developer does not have the hardware to test and
-design for a wider user base. Moreover the maintainer does not care to offer
-support for other, platforms being that supporting a system he can't test is
-apparently, an excercise in futility.
+Jsh is a JavaScript shell written in C by [Triston J. Taylor](https://facebook.com/pc.wiz.tt)
+for [GNU/Linux systems](http://www.gnu.org/gnu/linux-and-gnu.html).
+The shell is designed for [Unix style systems](http://www.unix.org/) on the 
+premise, that the author does not have the hardware to test and design for a 
+wider user base. Moreover the maintainer does not care to offer support for 
+other, platforms being that supporting a system he can't test is apparently, an 
+excercise in futility.
 
 The author maintains several pages in the Facebook network, most notably are
 [Unix4u](https://facebook.com/unix4u), and [BASH Scripting](https://facebook.com/alt.bash).
@@ -21,31 +22,38 @@ Triston, is known to be a knowledgeable source of information about computers,
 electronics and well, pretty much, more than a little bit of everything. He has knowledge
 and experience using more than 10 different programming languages which he has
 acquired over a period of 15 years. His first taste of actual programming was
-with a web browser using NetScape's JavaScript. Don't let him fool you, he
+with a [Phillips Magnavox WebTV](http://en.wikipedia.org/wiki/WebTV_Networks#Early_history)
+using [Netscape](http://en.wikipedia.org/wiki/Netscape)'s JavaScript. Don't let him fool you, he
 plays favorites with programming languages, and there are very few he considers
 worth the effort.
 
-JavaScript was designed and concieved at NetScape by Brendan Eich, many years
+JavaScript was designed and concieved at Netscape by
+[Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich), many years
 ago, before the, web was the web we know today. The modern JavaScript standard
-is maintained and developed by the [ECMA](http://www.ecma.org). 
-The current design standard of jsh, is built on the Gnome project's [Seed
-Engine](https://live.gnome.org/Seed) version 3.2, which is based on The Open 
-Source Apple [Safari WebKit](http://www.webkit.org/) JavaScriptCore.
+is maintained and developed by the [ECMA](http://www.ecma-international.org). 
+The current design standard of Jsh, is built with the [Gnome](http://gnome.org)
+project's [LGPL Seed Engine](https://live.gnome.org/Seed) version 3.2, which is
+based on The Open Source Apple [Safari WebKit](http://www.webkit.org/)
+[JavaScriptCore](http://trac.webkit.org/wiki/JavaScriptCore).
 
 Jsh aims to be a great platform for scripting in the Unix world. If any other
 platforms may benefit from this overview then *good for them*. But user be warned,
-we will not break our backs, api, or stability to support foolishness. One
+we will not break our backs, API, or stability to support foolishness. One
 environment is hard enough to get right.
 
 The use of Gnome Seed allows jsh to interface, with most of the Gnome
-programming platform through GObjectIntrospection. This includes notable
-software technologies like GTK+ and WebKitGtk, but that's not what Jsh is about.
+programming platform through 
+[GObjectIntrospection](https://live.gnome.org/GObjectIntrospection). This 
+includes notable software technologies like [GTK+](http://www.gtk.org/) and
+[WebKitGtk+](http://webkitgtk.org/), but that's not what Jsh is about.
 Jsh is more or less about what the author belives a JavaScript shell should be.
 
 JavaScript, while novel and extremely utilitarian, can be quite slow with the 
 "get up and go" when it comes to heavy performance, but the author knows better.
 He knows how a processor works from inside, as he has taught himself coding in 
-JavaScript, Java, Perl, C and Assembler.
+JavaScript, [Java](http://www.java.com/), [Perl](http://www.perl.org/),
+[C](http://en.wikipedia.org/wiki/C_\(programming_language\)) and
+Intel [x86 Assembler](http://en.wikipedia.org/wiki/X86_assembly_language).
 
 Slow? Oh, hell no! Not unless you are doing it wrong! JavaScript and C were virtually
 made for each other, but from their backgrounds, one certainly wouldn't guess it
@@ -53,6 +61,7 @@ right off. Jsh is going to be that "thing" that shows them all how it is suppose
 to be done. Interfacing with shared libraries for the gruntwork, and applying
 all polish and process control through scripting.
 <hr>
+
 #### How it's done
 In a word, [dyncall](http://dyncall.org) a dynamic symbol loader written for
 various platforms. Binding JavaScript with this library gives Jsh the power to be.
@@ -109,11 +118,13 @@ What Jsh Plans to Do:
 	15. User Github hosted script repository
 
 <hr>
-Jsh has no intention to be a POSIX shell, but if you work at it, you might be
-able to build one with it in no time at all, without all of the binary overhead.
-It isn't until we reach completion of the above task list that version 1.0 of
-jsh will be anounced for general user incorporation.
+Jsh has no intention to be a [POSIX shell](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html),
+but if you work at it, you might be able to build one with it in no time at all,
+without all of the binary overhead. It isn't until we reach completion of the 
+above task list that version 1.0 of jsh will be anounced for general user incorporation.
 
 If you would like to help out with development or have questions feel free to 
 contact the developer here on [GitHub](https://github.com/hypersoft), [Facebook](https://facebook.com/pc.wiz.tt), or [Gmail](mailto:pc.wiz.tt@gmail.com)
+
+######*We've come a long way from html, javascript, perl, cgi, and diskless set-tops. The view is comparitively awesome*
 <markup theme='hypersoft'>
