@@ -1,11 +1,20 @@
+<markup theme='hypersoft'>
 jsh
 ===
 
 ### *The Hypersoft JavaScript Shell*
 
->Hello user, our repository is currently undergoing initial construction. Please
-be patient while we see to important matters such as licensing and initial code
-uploads.
+	 Platform: GNU/Linux
+	 Language: C
+
+	 Temporary License: Creative Commons Attribution 3.0 Unported License
+
+	 Permanent licenses will be issued here as soon as we have decided which license
+	 is best suited for the project's goals, and the end user experience. At this
+	 time, one should consider this license evaluation only, with rights to 'tinker'
+	 and share.
+
+><hr>
 
 #### Introduction
 Jsh is a JavaScript shell written in C by [Triston J. Taylor](https://facebook.com/pc.wiz.tt)
@@ -71,14 +80,13 @@ interface, and run them from Jsh with ease. We have taken great care to analyse
 what JavaScript can and can't do the C way, and we built a bridge to get across
 that river using dyncall, with relative ease.
 
-What JavaScript Cannot Do:
+####What JavaScript Cannot Do:
 
-	1. Readily use parameters as return types "top-level stack parameters" are protected
-	2. Allocate and free value typed buffers
-	3. Write to value typed buffers
-	4. Load shared libraries (or applications) and access symbols from within them
-	5. Match the performance of a production status compiled language.
-	6. Native structures, unions, enums, calls and call backs
+* Readily use parameters as return types "top-level stack parameters" are protected
+* Allocate and free value typed buffers
+* Load shared libraries (or applications) and access symbols from within them
+* Match the performance of a production status compiled language.
+* Native structures, unions, enums, calls and call backs
 
 The Seed project has broken a lot of these rules, but left the end user with
 something to be desired for. They boarded up the windows, and sealed the doors
@@ -92,32 +100,65 @@ author would dare not enter into without a fat paycheck to follow. In other
 words, its a useful work that we will allow you to take advantage of as well
 as the C additions we have implemented.
 	 
-What Jsh Can Do:
+####What Jsh Can Already Do:
 
-	1. Allocate and free value typed buffers
-	2. Load shared libraries (or applications) and access symbols from within them
-	3. Closely match the perfomance of a production status compiled language
-	4. Native calls
+* Load/Unload shared libraries & applications
+* Locate symbols in shared libraries & applications
+* Native procedure prototype scripting (unlimited definitions per symbol)
+* Allocate and free native C types or arrays (buffers)
+* Pass native C types and arrays as parameters to native functions
+* Retrieve javascript primatives or arrays from native C types (unbuffering)
 
-What Jsh Plans to Do:
+><hr>
 
-	 1. Write to value typed buffers
-	 2. Native structures, unions, and call backs
-	 3. Unix style script interpretation with execution status checking
-	 4. Arbitrary file execution
-	 5. Standard input execution
-	 6. Command line statement evaluation
-	 7. Interactive input execution
-	 8. /etc/jsh.rc init script
-	 9. ~/.jshrc init script
-	10. Shared Library and symbol white-listing at system level
-	11. Bypass user or system init scripts (exclusive to white-listing)
-	12. System logfile of information useful to execution diagnostics
-	13. Ability to run scripts as a daemon process
-	14. Official Github hosted script repository
-	15. User Github hosted script repository
+####What's up next:
+
+* Create native C types from javascript primatives
+
+><hr>
+
+####Backburner:
+
+* Command line statement evaluation
+* Command line syntax check
+* Command line file execution
+* Compile Standard input mode
+* Unix shebang script interpretation
+* Interactive input mode
+* System initialization script: (/etc/jsh.rc)
+* User initialization script: (~/.jshrc init script)
+* Bypass init scripts
+* System adminstration: Whitelisting (/etc/jsh/shared.wl)
+* System administration: Blacklisting (/etc/jsh/shared.bl)
+* Native structures
+* Procedure call backs
+* System logfile
+* Possibly support daemonization (needs review)
 
 <hr>
+
+####How to build:
+
+	 git clone https://github.com/hypersoft/jsh.git;
+	 cd jsh && make;
+
+>Currently there are no install or clean targets. The resulting file is located
+in the bin directory: `./bin/jsh`
+<hr>
+
+####Hello World jsh:
+
+	 puts = new jsh.library("libc.so.6").find("puts").declare(jsh.type.int, jsh.type.string);
+	 puts("Hello World!");
+	 Seed.quit();
+
+Do try not to venture out too far into the project's internals as there is no
+solid definition of how we want to do anything other than the "Hello World"
+example given above. While we are using Seed now, that could change as the project
+matures and is eventually able to load Seed on its own.
+
+><hr>
+
 Jsh has no intention to be a [POSIX shell](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html),
 but if you work at it, you might be able to build one with it in no time at all,
 without all of the binary overhead. It isn't until we reach completion of the 
@@ -125,6 +166,5 @@ above task list that version 1.0 of jsh will be anounced for general user incorp
 
 If you would like to help out with development or have questions feel free to 
 contact the developer here on [GitHub](https://github.com/hypersoft), [Facebook](https://facebook.com/pc.wiz.tt), or [Gmail](mailto:pc.wiz.tt@gmail.com)
-
-######*We've come a long way from html, javascript, perl, cgi, and diskless set-tops. The view is comparitively awesome*
-<markup theme='hypersoft'>
+<div align=right><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/80x15.png" /></a>
+</div>
