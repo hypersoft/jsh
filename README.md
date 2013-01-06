@@ -8,7 +8,7 @@ jsh<markup theme='hypersoft'>
 
 	 Temporary License: Creative Commons Attribution 3.0 Unported License
 
-	 Permanent licenses will be issued here as soon as we have decided which license is best suited for the project's goals, and the end user experience. At this time, one should consider this license evaluation only, with rights to 'tinker' and share.
+Permanent licenses will be issued here as soon as we have decided which license is best suited for the project's goals, and the end user experience. At this time, one should consider this license evaluation only, with rights to 'tinker' and share.
 
 ><hr>
 
