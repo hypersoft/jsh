@@ -1,4 +1,4 @@
 jsh
 ===
 
-Hypersoft JavaScript Shell
+The Hypersoft JavaScript Shell
