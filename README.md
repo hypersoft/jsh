@@ -64,9 +64,56 @@ that river using dyncall, with relative ease.
 
 What JavaScript Cannot Do:
 
-	1. Readily use parameters as return types
-	2. Allocate Value Typed Buffers
-	3. Free Value Typed Buffers
-	4. Load Shared libraries (or applications) and access symbols from within them
+	1. Readily use parameters as return types "top-level stack parameters" are protected
+	2. Allocate and free value typed buffers
+	3. Write to value typed buffers
+	4. Load shared libraries (or applications) and access symbols from within them
 	5. Match the performance of a production status compiled language.
+	6. Native structures, unions, enums, calls and call backs
+
+The Seed project has broken a lot of these rules, but left the end user with
+something to be desired for. They boarded up the windows, and sealed the doors
+shut after they barricaded the goldmine under a web of code we would rather
+not try to decipher. And that sucks. For example, what if the user doesn't care for
+GObjects and Instrospection? What then? A tool that was otherwise headed for
+greatness is condemned to lurk in the shadows as yet another "could have been".
+
+We didn't like that idea. The project has made some great headroom that this
+author would dare not enter into without a fat paycheck to follow. In other
+words, its a useful work that we will allow you to take advantage of as well
+as the C additions we have implemented.
+	 
+What Jsh Can Do:
+
+	1. Allocate and free value typed buffers
+	2. Load shared libraries (or applications) and access symbols from within them
+	3. Closely match the perfomance of a production status compiled language
+	4. Native calls
+
+What Jsh Plans to Do:
+
+	 1. Write to value typed buffers
+	 2. Native structures, unions, and call backs
+	 3. Unix style script interpretation with execution status checking
+	 4. Arbitrary file execution
+	 5. Standard input execution
+	 6. Command line statement evaluation
+	 7. Interactive input execution
+	 8. /etc/jsh.rc init script
+	 9. ~/.jshrc init script
+	10. Shared Library and symbol white-listing at system level
+	11. Bypass user or system init scripts (exclusive to white-listing)
+	12. System logfile of information useful to execution diagnostics
+	13. Ability to run scripts as a daemon process
+	14. Official Github hosted script repository
+	15. User Github hosted script repository
+
+<hr>
+Jsh has no intention to be a POSIX shell, but if you work at it, you might be
+able to build one with it in no time at all, without all of the binary overhead.
+It isn't until we reach completion of the above task list that version 1.0 of
+jsh will be anounced for general user incorporation.
+
+If you would like to help out with development or have questions feel free to 
+contact the developer here on [GitHub](https://github.com/hypersoft), [Facebook](https://facebook.com/pc.wiz.tt), or [Gmail](mailto:pc.wiz.tt@gmail.com)
 <markup theme='hypersoft'>
