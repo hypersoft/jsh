@@ -89,7 +89,7 @@ cp -vt ${BINARYDEST} ${LIBS};
 wait $!;
 
 # get rid of junk
-rm -vrf $dynRoot;
+rm -rf $dynRoot;
 
 echo Dyncall Assimilation Complete
 
