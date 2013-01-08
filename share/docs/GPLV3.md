@@ -1,10 +1,36 @@
-<h3 style="text-align: center;">GNU GENERAL PUBLIC LICENSE</h3>
+<h3 style="text-align: center;">GNU GENERAL PUBLIC LICENSE
+<markup theme=hypersoft></h3>
 <p style="text-align: center;">Version 3, 29 June 2007</p>
-
 <p>Copyright &copy; 2007 Free Software Foundation, Inc.
  &lt;<a href="http://fsf.org/">http://fsf.org/</a>&gt;</p><p>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.</p>
+
+<h3>Table of Contents</h3>
+
+* <a href='#preamble'>Preamble</a>
+* <a href='#terms'>Terms</a>
+* <a href='#section0'>Definitons</a>
+* <a href='#section1'>1. Source Code</a>
+* <a href='#section2'>2. Basic Permissions</a>
+* <a href='#section3'>3. Protecting Users' Legal Rights From Anti-Circumvention Law.</a>
+* <a href='#section4'>4. Conveying Verbatim Copies.</a>
+* <a href='#section5'>5. Conveying Modified Source Versions.</a>
+* <a href='#section6'>6. Conveying Non-Source Forms.</a>
+* <a href='#section7'>7. Additional Terms.</a>
+* <a href='#section8'>8. Termination.</a>
+* <a href='#section9'>9. Acceptance Not Required for Having Copies.</a>
+* <a href='#section10'>10. Automatic Licensing of Downstream Recipients.</a>
+* <a href='#section11'>11. Patents.</a>
+* <a href='#section12'>12. No Surrender of Others' Freedom.</a>
+* <a href='#section13'>13. Use with the GNU Affero General Public License.</a>
+* <a href='#section14'>14. Revised Versions of this License.</a>
+* <a href='#section15'>15. Disclaimer of Warranty.</a>
+* <a href='#section16'>16. Limitation of Liability.</a>
+* <a href='#section17'>17. Interpretation of Sections 15 and 16.</a>
+* <a href='#howto'>How to Apply These Terms to Your New Programs</a>
+
+<hr>
 
 <h3><a name="preamble"></a>Preamble</h3>
 
