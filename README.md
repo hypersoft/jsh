@@ -101,13 +101,13 @@ as the C additions we have implemented.
 * Native procedure prototype scripting (unlimited definitions per symbol)
 * Allocate and free native C types or arrays (buffers)
 * Pass native C types and arrays as parameters to native functions
-* Retrieve javascript primatives or arrays from native C types (unbuffering)
+* Retrieve javascript primitives or arrays from native C types (unbuffering)
 
 ><hr>
 
 ####What's up next:
 
-* Create native C types from javascript primatives
+* Create native C types from javascript primitives
 
 ><hr>
 
