@@ -1,4 +1,4 @@
-jsh<markup theme='hypersoft'>
+jsh <markup theme='hypersoft'>
 ===
 
 ### *The Hypersoft JavaScript Shell*
