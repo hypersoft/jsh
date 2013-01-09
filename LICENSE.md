@@ -16,7 +16,7 @@ jsh <markup theme='hypersoft'>
 ><hr>
 
 #### Licensing Information
-We offer a commercial BSD Like, Extended 2-Clause license for four reasons:
+We offer a commercial BSD Like, 2-Clause contributary license for four reasons:
 
 >**1.** Entities who have made considerable contributions to this work with,
 permisive licensing shall not be denied the right to prosper from this work.
@@ -38,10 +38,17 @@ contribution(s) to this work:
 * GitHub Inc. (Code Hosting)
 * Gnome.org (Seed Project)
 
-If you are interested in purchasing a commercial license, contact the author for
-pricing inquiries. If you are upset by our licensing, get over it. We have found,
-our reasoning to be sound and fair to everyone rather than being unfair, and 
-uncompromising.
+If you are interested in purchasing a contributary license, or becoming a
+contributor, contact the respective project maintainer.
+
+Due to the fact that we cannot relicense GPL'd code, GPL'd code submissions,
+cannot be incorporated into a contributary project. LGPL'd libraries are the
+only acceptable form of GPL'd code integration for the main project at this time.
+
+The contributary 2-Clause, by which all upstream code submissions must adhere
+to, ensures that a contributors code is in fact GPL compatible. This is a method
+to ensure that we have a well defined cross-licensing, cross-platform solution to
+provide to the general public as well as the project contributors.
 
 If you would like to make a $25.00 donation, please contact the author for
 information as to where you can send your donation via snail mail. If you would
@@ -127,17 +134,14 @@ Thank you.
 ><hr>
 
 <div id=legalFinePrint><font size=1>
-Sublicensing of commercial licenses are expressly prohibited without the formal
-written consent of the respective project author. Some individuals may qualify
-for a commercial license due to sizable contributions, but are not listed here
-for brevity, contact the project author for inquiries into this matter. 
 Individuals and entities listed throughout this work do not constitute an
-endorsement of this work, nor does a mention of any entity identifier constitute
-agreement with any views or opinions portrayed or expressed by this work, its
-primary author or contributors. All trademarks and copyrights are the respective
-properties of the respective owners. This document may not by any means be removed
-from a source distribution of this work, without express written consent from the
-copyright holder of this work. Modification of this document is strictly prohibited.
+endorsement of this work, nor does a mention of any entity identifier
+constitute agreement with any views or opinions portrayed or expressed by this 
+work, its primary author or contributors. All trademarks and copyrights are the 
+respective properties of the respective owners. 
+This document may not by any means be removed from a source distribution of this work,
+without express written consent from the copyright holder of this work. 
+Modification of this document is strictly prohibited.
 Copyright (C) 2013 Triston J. Taylor All rights reserved.
 </font></div>
 
