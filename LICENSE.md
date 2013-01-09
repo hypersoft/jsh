@@ -17,7 +17,7 @@ jsh <markup theme='hypersoft'>
 
 #### Licensing Information
 We offer a
-[commercial BSD Like, 2-Clause contributary license](jsh/share/docs/LICENSE/Hypersoft-Contributary.md)
+[commercial BSD Like, 2-Clause contributary license](share/docs/LICENSE/Hypersoft-Contributary.md)
 for four reasons:
 
 >**1.** Entities who have made considerable contributions to this work with,
