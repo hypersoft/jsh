@@ -16,7 +16,9 @@ jsh <markup theme='hypersoft'>
 ><hr>
 
 #### Licensing Information
-We offer a commercial BSD Like, 2-Clause contributary license for four reasons:
+We offer a
+[commercial BSD Like, 2-Clause contributary license](jsh/share/docs/LICENSE/Hypersoft-Contributary.md)
+for four reasons:
 
 >**1.** Entities who have made considerable contributions to this work with,
 permisive licensing shall not be denied the right to prosper from this work.
