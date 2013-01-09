@@ -1,5 +1,8 @@
-<h3 style="text-align: center;">GNU GENERAL PUBLIC LICENSE
-<markup theme=hypersoft></h3>
+<h3 style="text-align: center;">
+GNU GENERAL PUBLIC LICENSE
+<markup theme=hypersoft>
+</h3>
+
 <p style="text-align: center;">Version 3, 29 June 2007</p>
 <p>Copyright &copy; 2007 Free Software Foundation, Inc.
  &lt;<a href="http://fsf.org/">http://fsf.org/</a>&gt;</p><p>
@@ -10,7 +13,7 @@
 
 * <a href='#preamble'>Preamble</a>
 * <a href='#terms'>Terms</a>
-* <a href='#section0'>Definitons</a>
+* <a href='#section0'>0. Definitons</a>
 * <a href='#section1'>1. Source Code</a>
 * <a href='#section2'>2. Basic Permissions</a>
 * <a href='#section3'>3. Protecting Users' Legal Rights From Anti-Circumvention Law.</a>

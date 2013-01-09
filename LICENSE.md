@@ -11,12 +11,12 @@ jsh <markup theme='hypersoft'>
 
 	Free Software License: GPL V3
 
-	Commercial License: BSD 2-Clause
+	Commercial License: BSD Like, Contributary 2-Clause
 
 ><hr>
 
 #### Licensing Information
-We offer a commercial BSD 2-Clause license for four reasons:
+We offer a commercial BSD Like, Extended 2-Clause license for four reasons:
 
 >**1.** Entities who have made considerable contributions to this work with,
 permisive licensing shall not be denied the right to prosper from this work.
@@ -58,7 +58,7 @@ Thank you.
 <hr>
 
 
-###More Legal Stuff
+###Contributed Software Licenses
 
 ####JavaScriptCore Copyright (C) 2006-2008
 

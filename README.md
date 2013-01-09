@@ -9,7 +9,7 @@ jsh<markup theme='hypersoft'>
 	Author: Copyright (C) Triston J. Taylor 2013 All rigths reserved
 	Contact: <pc.wiz.tt@gmail.com>
 
-	Dual License: GPL V.3 (Free), BSD 2-Clause (Commercial) see LICENSE.md
+	Dual License: GPL V.3 (Free), BSD Like, Contributary 2-Clause (Commercial) see LICENSE.md
 
 ><hr>
 
@@ -156,11 +156,14 @@ matures and is eventually able to load Seed on its own.
 
 ><hr>
 
-Jsh has no intention to be a [POSIX shell](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html),
+Jsh has no intention to be a
+[POSIX shell](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html),
 but if you work at it, you might be able to build one with it in no time at all,
 without all of the binary overhead. It isn't until we reach completion of the 
 above task list that version 1.0 of jsh will be anounced for general user incorporation.
 
-If you would like to help out with development or have questions feel free to 
-contact the developer here on [GitHub](https://github.com/hypersoft), [Facebook](https://facebook.com/pc.wiz.tt), or [Gmail](mailto:pc.wiz.tt@gmail.com)
+If you have questions feel free to contact the developer here on 
+[GitHub](https://github.com/hypersoft),
+[Facebook](https://facebook.com/pc.wiz.tt), or 
+[Gmail](mailto:pc.wiz.tt@gmail.com)
 
