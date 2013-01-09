@@ -140,8 +140,8 @@ constitute agreement with any views or opinions portrayed or expressed by this
 work, its primary author or contributors. All trademarks and copyrights are the 
 respective properties of the respective owners. 
 This document may not by any means be removed from a source distribution of this work,
-without express written consent from the copyright holder of this work. 
-Modification of this document is strictly prohibited.
+without express written consent from the contributary representative of this work. 
+Modification of this document is prohibited by right to disclaimer and copyright notice.
 Copyright (C) 2013 Triston J. Taylor All rights reserved.
 </font></div>
 
