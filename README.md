@@ -1,12 +1,15 @@
-jsh <markup theme='hypersoft'>
+jsh<markup theme='hypersoft'>
 ===
 
 ### *The Hypersoft JavaScript Shell*
 
-	 Platform: GNU/Linux
-	 Language: C
+	Platform: GNU/Linux
+	Language: C
 
-	 Dual License: GPL V.3 (Free), BSD 2-Clause (Commercial) see LICENSE.md
+	Author: Copyright (C) Triston J. Taylor 2013 All rigths reserved
+	Contact: <pc.wiz.tt@gmail.com>
+
+	Dual License: GPL V.3 (Free), BSD 2-Clause (Commercial) see LICENSE.md
 
 ><hr>
 

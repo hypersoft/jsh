@@ -1,4 +1,4 @@
-jsh<markup theme='hypersoft'>
+jsh <markup theme='hypersoft'>
 ===
 
 ### *The Hypersoft JavaScript Shell*
@@ -57,6 +57,7 @@ Thank you.
 
 <hr>
 
+
 ###More Legal Stuff
 
 ####JavaScriptCore Copyright (C) 2006-2008
@@ -88,7 +89,7 @@ Thank you.
 
 ><hr>
 
-####Seed GObjectIntroSpection Bindings Copyright (c) 2009
+####Seed JavaScriptCore GObjectIntroSpection Bindings Copyright (c) 2009
 
 	Copyright (C) Robert Carr 2009 <carrr@rpi.edu>
 
