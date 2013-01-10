@@ -144,6 +144,8 @@ SeedValue jsh_native_unbuffer(SeedContext ctx, SeedObject function, SeedObject t
 
 	void * buffer = seed_pointer_get_pointer(ctx, arguments[0]);
 
+	if ( ! buffer ) return seed_make_undefined(ctx);
+
 	unsigned int type = seed_value_to_int(ctx, 
 		seed_object_get_property(ctx, arguments[0], "type"), exception
 	);
