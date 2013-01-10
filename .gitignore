@@ -1,4 +1,4 @@
 bin/*
 src/include/*.inc
-src/dyn*
+src/dyncall*
 share/docs/JavaScriptCore
