@@ -9,7 +9,7 @@ jsh<markup theme='hypersoft'>
 	Contributor: Copyright (C) 2013, Triston J. Taylor
 	Contact: <pc.wiz.tt@gmail.com>
 
-	Dual License: GPL V.3 (Free), BSD Like, Contributary 2-Clause (Commercial) see LICENSE.md
+	Dual License: GPL V.3 (Free), Contributary 2-Clause BSD Style (Commercial) see LICENSE.md
 
 ><hr>
 
