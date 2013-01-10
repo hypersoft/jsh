@@ -13,6 +13,12 @@ jsh<markup theme='hypersoft'>
 
 ><hr>
 
+#### Status
+
+	Repository Initialization
+
+><hr>
+
 #### Introduction
 Jsh is a JavaScript shell written in C by [Triston J. Taylor](https://facebook.com/pc.wiz.tt)
 for [GNU/Linux systems](http://www.gnu.org/gnu/linux-and-gnu.html).
