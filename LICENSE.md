@@ -6,7 +6,7 @@ jsh <markup theme='hypersoft'>
 	Platform: GNU/Linux
 	Language: C
 
-	Author: Copyright (C) Triston J. Taylor 2013 All rigths reserved
+	Contributor: Copyright (C) 2013, Triston J. Taylor
 	Contact: <pc.wiz.tt@gmail.com>
 
 	Free Software License: GPL V3
