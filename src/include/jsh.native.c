@@ -1,3 +1,9 @@
+/*
+
+	Copyright (C) 2013, Triston J. Taylor
+
+*/
+
 /* REQUIRES <stdlib.h> */
 
 /*

@@ -32,6 +32,14 @@ marketable advantage.
 >**4.** Anything less, would be uncivilized.
 
 <br/>
+We offer a
+[Free Software License](share/docs/LICENSE/GPLV3.md) for quite a few reasons.
+The primary being, there's no reason we cannot be civil. 
+What this boils down to is the specialization of technology. All advances and 
+fields of science may not be willing or able to release gainful research during
+development and lifecycle. Our licensing hopes to be a bridge for that common
+interest where sharing is truly meaningful and available.
+
 Following is a list of commercially qualified entities with their respective
 contribution(s) to this work:
 
