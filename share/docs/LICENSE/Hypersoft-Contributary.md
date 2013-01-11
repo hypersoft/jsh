@@ -1,7 +1,7 @@
 Contributors
 ============
 
-Copyright (C) 2013, Triston J. Taylor All rights reserved.
+Copyright (C) 2013, Triston J. Taylor
 
 License
 =======
