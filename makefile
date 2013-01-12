@@ -1,20 +1,17 @@
 
 APPLICATION := bin/jsh
 
-MACHTYPE := $(shell build/tools/config.sh)
-
 SOURCE := src/jsh.c
 
-SOURCE_INCLUDES := src/include/*.c $(shell echo src/include/{init,init.native,init.etc}.inc)
-
-PKGS := seed
+PKGS := javascriptcoregtk-3.0
 
 PKGCONFIG := $(shell pkg-config --silence-errors --cflags --libs ${PKGS})
 
-OPTIMIZE := -O3 -march=native -mtune=generic -fomit-frame-pointer -pipe
+OPTIMIZE := -O3 -march=native -mtune=generic
 
-DYNHOME := src/dyncall-0.7
-DYNCALL := src/dyncall
+DYNCALL := src/include/dyncall
+AUTO_INCLUDES := $(shell build/tools/autoincludes)
+REQUIRES := ${DYNCALL} ${AUTO_INCLUDES} $(shell find . -type f -wholename '*.c' -o -wholename '*.h' -o -wholename '*.js' -o -wholename '*.inc') 
 
 all: ${APPLICATION}
 
@@ -23,34 +20,22 @@ all: ${APPLICATION}
 # locations. DO NOT MODIFY THESE FILES!
 
 ${DYNCALL}:
-	@build/tools/dynhacker.org ${DYNHOME}
+	@build/tools/dynhacker
 
-
-src/include/init.inc: src/include/js/init.js
+src/js/common.inc: src/js/common.js
 	@echo ''
 	@echo Building include file $@ ...
-	build/tools/bin2inc jsh_init_script src/include/js/init.js > $@
+	build/tools/bin2inc js_common_source src/js/common.js > $@
 	@echo ''
 
-src/include/init.native.inc: src/include/js/init.native.js
+src/js/core.inc: src/js/core.js
 	@echo ''
 	@echo Building include file $@ ...
-	build/tools/bin2inc jsh_init_native_script src/include/js/init.native.js > $@
+	build/tools/bin2inc js_core_source src/js/core.js > $@
 	@echo ''
-
-src/include/init.etc.inc: src/include/js/init.etc.js
-	@echo ''
-	@echo Building include file $@ ...
-	build/tools/bin2inc jsh_init_etc_script src/include/js/init.etc.js > $@
-	@echo ''
-
-
-# Shortnames for targets (use -B to force)
-init-scripts: src/include/init.inc src/include/init.native.inc src/include/init.etc.inc
-dyncall: ${DYNCALL}
 
 # This rule builds jsh
-${APPLICATION}: ${DYNCALL} ${SOURCE} ${SOURCE_INCLUDES}
+${APPLICATION}: ${SOURCE} ${REQUIRES}
 	@echo 'Validating required packages...'
 	pkg-config --print-errors --exists ${PKGS}
 	@echo ''

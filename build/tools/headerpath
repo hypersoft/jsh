@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Copyright 2013, Triston J. Taylor
+
+POSSIBLE=($(find /usr -type f -wholename '*'"$1" 2>/dev/null));
+
+(( ${#POSSIBLE[@]} == 1 )) && {
+	
+	PATH="${POSSIBLE[0]}"
+	echo "${PATH%%/$1*}"
+
+}

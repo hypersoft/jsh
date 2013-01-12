@@ -1,17 +1,9 @@
-#include <stdlib.h>
-#include <glib.h>
-#include <seed.h>
-#include <JavaScriptCore/JavaScript.h>
 
-/* HAPPY HACKERS  <---+--->  GOTTA LUV 'EM */
-   #include "dyncall/dyncall.h"
-   #include "dyncall/dynload.h"
-   #include "dyncall/dyncall_signature.h"
-/* ====================================== */
+#include "include/dev.tech.js.engine.c"
 
 SeedValue jsh_get_object_property(void * ctx, SeedObject base, char *property) {
 	void *jstemp = 0;
- 	void * jshobj = (void *) JSObjectGetProperty(ctx, base, 
+ 	void * jshobj = (void *) jscore_object_get_property(ctx, base, 
 		jstemp = JSStringCreateWithUTF8CString(property), NULL
 	);  JSStringRelease(jstemp);
 	return jshobj;
@@ -26,12 +18,6 @@ void jsh_register_native(void *context, void *object, const char * name, void * 
 	);  JSStringRelease(fname);
 
 }
-
-#include "include/init.inc"
-#include "include/init.native.inc"
-#include "include/init.etc.inc"
-
-#include "include/jsh.native.c"
 
 SeedScript * jsh_initialize(char * binary, SeedContext ctx, SeedObject global) {
 

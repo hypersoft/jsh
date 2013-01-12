@@ -1,0 +1,103 @@
+/*
+
+	Unified API Development Kit for WebkitGtk+ JavaScriptCore
+
+	Copyright (C) 2013, Triston J. Taylor
+
+*/
+
+#include <JavaScriptCore/JavaScript.h>
+
+#define BIT(n) (1 << (n - 1))
+
+//typedef enum JSAPI_PROPERTY_FLAGS { 
+#define JSAPI_PROPERTY_DEFAULT kJSPropertyAttributeNone
+#define JSAPI_PROPERTY_LOCKED kJSPropertyAttributeReadOnly
+#define JSAPI_PROPERTY_CLOAKED kJSPropertyAttributeDontEnum
+#define JSAPI_PROPERTY_CONST kJSPropertyAttributeDontDelete
+//} JSAPI_PROPERTY_FLAGS;
+
+//typedef enum JSAPI_CLASS_FLAGS {
+#define JSAPI_CLASS_DEFAULT kJSClassAttributeNone
+#define JSAPI_CLASS_PRIMITIVE kJSClassAttributeNoAutomaticPrototype
+//} JSAPI_CLASS_FLAGS;
+
+#define jsapi_collect_garbage JSGarbageCollect
+
+#define jsapi_evaluate_source JSEvaluateScript
+#define jsapi_evaluate_source_syntax JSCheckScriptSyntax
+
+#define jsapi_compare_values JSValueIsEqual
+#define jsapi_compare_values_strict JSValueIsStrictEqual
+
+#define jsapi_value_type JSValueGetType
+#define jsapi_value_type_undefined JSValueIsUndefined
+#define jsapi_value_type_null JSValueIsNull
+#define jsapi_value_type_boolean JSValueIsBoolean
+#define jsapi_value_type_number JSValueIsNumber
+#define jsapi_value_type_string JSValueIsString
+#define jsapi_value_type_object JSValueIsObject
+
+#define jsapi_value_promote_object JSValueToObject
+#define jsapi_value_undefined JSValueMakeUndefined
+#define jsapi_value_null JSValueMakeNull
+#define jsapi_value_protect JSValueProtect
+#define jsapi_value_unprotect JSValueUnprotect
+
+#define jsapi_value_import_json JSValueMakeFromJSONString
+#define jsapi_value_export_json JSValueCreateJSONString
+#define jsapi_value_import_number JSValueMakeNumber
+#define jsapi_value_export_number JSValueToNumber
+#define jsapi_value_import_boolean JSValueMakeBoolean
+#define jsapi_value_export_boolean JSValueToBoolean
+#define jsapi_value_import_wstring JSValueMakeString
+#define jsapi_value_export_wstring JSValueToStringCopy
+
+#define jsapi_string_compare_strings JSStringIsEqual
+#define jsapi_string_compare_cstring JSStringIsEqualToUTF8CString
+#define jsapi_string_import_cstring JSStringCreateWithUTF8CString
+#define jsapi_string_export_cstring JSStringGetUTF8CString
+#define jsapi_string_get_cstring_length JSStringGetMaximumUTF8CStringSize
+
+#define jsapi_string_import_buffer JSStringCreateWithCharacters
+#define jsapi_string_get_buffer JSStringGetCharactersPtr
+#define jsapi_string_get_length JSStringGetLength
+#define jsapi_string_retain JSStringRetain
+#define jsapi_string_release JSStringRelease
+
+#define jsapi_class_retain JSClassRetain
+#define jsapi_class_release JSClassRelease
+
+#define jsapi_object_class_type JSValueIsObjectOfClass
+#define jsapi_object_get_prototype JSObjectGetPrototype
+#define jsapi_object_set_prototype JSObjectSetPrototype
+#define jsapi_object_has_property JSObjectHasProperty
+#define jsapi_object_get_property JSObjectGetProperty
+#define jsapi_object_del_property JSObjectDeleteProperty
+#define jsapi_object_get_property_index JSObjectGetPropertyAtIndex
+#define jsapi_object_set_property_index JSObjectSetPropertyAtIndex
+#define jsapi_object_get_private JSObjectGetPrivate
+#define jsapi_object_set_private JSObjectSetPrivate
+#define jsapi_object_apply JSObjectCallAsFunction
+#define jsapi_object_type_function JSObjectIsFunction
+#define jsapi_object_type_constructor JSObjectIsConstructor
+#define jsapi_object_type_constructor_child JSValueIsInstanceOfConstructor
+#define jsapi_object_constructor_apply JSObjectCallAsConstructor
+#define jsapi_object_copy_property_list JSObjectCopyPropertyNames
+
+#define jsapi_property_list_retain JSPropertyNameArrayRetain
+#define jsapi_property_list_release JSPropertyNameArrayRelease
+#define jsapi_property_list_count JSPropertyNameArrayGetCount
+#define jsapi_property_list_item JSPropertyNameArrayGetNameAtIndex
+
+#define jsapi_create_class JSClassCreate
+#define jsapi_create_object_constructor JSObjectMakeConstructor
+#define jsapi_create_object JSObjectMake
+#define jsapi_create_function JSObjectMakeFunctionWithCallback
+#define jsapi_create_array JSObjectMakeArray
+#define jsapi_create_date JSObjectMakeDate
+#define jsapi_create_error JSObjectMakeError
+#define jsapi_create_regex JSObjectMakeRegExp
+#define jsapi_create_source_function JSObjectMakeFunction
+
+

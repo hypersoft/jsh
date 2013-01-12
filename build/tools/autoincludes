@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Copyright 2013, Triston J. Taylor
+
+# script to generate list of required automatic files
+
+files=($(find . -type f -wholename '*.js'));
+
+for file in "${files[@]}"; do
+	echo "${file%%.js*}.inc";
+done
+

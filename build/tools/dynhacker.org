@@ -33,10 +33,10 @@
 #
 
 DYNCALLPKG=http://dyncall.org/r0.7/dyncall-0.7.tar.gz
-DYNCALLARC=src/dyncall-0.7.tar.gz
+DYNCALLARC=src/pkg/dyncall-0.7.tar.gz
 
 BINARYDEST=bin
-HEADERDEST=src/dyncall;
+HEADERDEST=src/include/dyncall;
 
 # HACK ROOT
 dynRoot=src/dyncall-0.7;
@@ -87,6 +87,9 @@ cp -vt ${HEADERDEST} ${HEADERS} &
 cp -vt ${BINARYDEST} ${LIBS};
 
 wait $!;
+
+echo Generating dyncall license...
+build/tools/bin2inc help_license_dyncall $dynRoot/LICENSE > $HEADERDEST/license.inc
 
 # get rid of junk
 rm -rf $dynRoot;
