@@ -1,4 +1,3 @@
 bin/*
 src/js/*.inc
 src/include/dyncall/*
-src/include/JavaScriptCore/*
