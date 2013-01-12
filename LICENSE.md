@@ -77,7 +77,7 @@ Thank you.
 
 ###Contributed Software Licenses
 
-####JavaScriptCore Copyright (C) 2006-2008
+####WebKitGtk+ JavaScriptCore Copyright (C) 2006-2008
 
 	Copyright (C) 2006 Apple Inc. All rights reserved.
 	Copyright (C) 2008 Alp Toker <alp@atoker.com>
@@ -103,24 +103,6 @@ Thank you.
 	OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 	(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
-
-><hr>
-
-####Seed JavaScriptCore GObjectIntroSpection Bindings Copyright (c) 2009
-
-	Copyright (C) Robert Carr 2009 <carrr@rpi.edu>
-
-	Seed is free software: you can redistribute it and/or modify
-	it under the terms of the GNU Lesser General Public License as
-	published by the Free Software Foundation, either version 2 of
-	the License, or (at your option) any later version.
-
-	Seed is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU Lesser General Public License for more details.
-	You should have received a copy of the GNU Lesser General Public License
-	along with Seed.  If not, see <http://www.gnu.org/licenses/>.
 
 ><hr>
 
