@@ -1,0 +1,8 @@
+#!/bin/bash -n
+
+# Copyright 2013, Triston J. Taylor
+
+# Bash utilities source module for developing jsh
+
+PATH="build/tools:$PATH" bash -s;
+
