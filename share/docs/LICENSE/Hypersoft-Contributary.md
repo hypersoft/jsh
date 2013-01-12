@@ -18,9 +18,10 @@ are permitted provided that the following conditions are met:
 
 2. Redistributions in binary form must:
 
-   1. Provide an accurate reproduction of this this license file, according to 
+   1. Obtain licensing authorization from any prior contributor.
+   2. Provide an accurate reproduction of this this license file, according to 
       clause 1 declaration 2, with the binary form.
-   2. Provide the following disclaimer in any reproduction of this license file,
+   3. Provide the following disclaimer in any reproduction of this license file,
       in accordance with the contributions of the respective authors.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
