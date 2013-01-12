@@ -17,6 +17,11 @@
 	exit 1;
 }
 
+[[ -z `git status --porcelain .gitignore` ]] ||  {
+	echo $0: error: You must commit changes to .gitignore before calling this application. >&2;
+	exit 1;
+}
+
 includepath() {
 
 	POSSIBLE=($(find /usr -type d -wholename '*inc*/'"$1" 2>/dev/null));
@@ -43,8 +48,10 @@ ignored() { grep -qx "$1"'\*' .gitignore; }
 
 ignore() {
 	ignore="src/include/$1*";
-	ignored "src/include/$1" || echo "$ignore" >> .gitignore
-	git commit -m "Added external header reference link" .gitignore
+	ignored "src/include/$1" || {
+		echo "$ignore" >> .gitignore
+		gitmsg+=$'\n'"Ignoring: $ignore";
+	}
 }
 
 devlink.rm() {
@@ -53,13 +60,13 @@ devlink.rm() {
 
 	[[ -L "$link" ]] || {
 		echo "$0: error: $1 is not a symbolic link" >&2;
-		exit 2;
+		return 2;
 	}
 
 	rm -v "$link";
 	content="`grep -vx "$link"'\*' .gitignore`";
 	echo "$content" > .gitignore;
-	git commit -m "Removed external header reference link" .gitignore
+	gitmsg+=$'\n'"Restoring: $link";
 
 }
 
@@ -76,6 +83,10 @@ devlink.add() {
 
 devlink=devlink.add;
 
+gitmsg='Development Link Management'$'\n';
+
+declare -i success=0;
+
 [[ $1 =~ (--rm|--remove|--undo|--delete) ]] && { devlink=devlink.rm; shift; }
 
 [[ $1 =~ (--list) ]] && {
@@ -87,5 +98,9 @@ devlink=devlink.add;
 }
 
 for provider; do
-	$devlink "$provider";
+	$devlink "$provider" && let success++;
 done
+
+(( success )) && {
+	git commit -m "$gitmsg" .gitignore
+}
