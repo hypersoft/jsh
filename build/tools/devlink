@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Copyright 2013, Triston J. Taylor
+
+# This script tries to locate an include path, and tries to link to
+# that path in src/include. Rules are committed to .gitignore to ignore
+# the link and its content.
+#
+# links can be removed with an rm option.
+#
+# These links could be used for development, but are provided only for reference
+
+# This script must be run from a git repository root
+
+[[ -e .gitignore ]] || {
+	echo $0: error: run me from the root of your repository. >&2;
+	exit 1;
+}
+
+includepath() {
+
+	POSSIBLE=($(find /usr -type d -wholename '*inc*/'"$1" 2>/dev/null));
+
+	(( ${#POSSIBLE[@]} == 1 )) && {
+	
+		echo "${POSSIBLE[0]}"
+
+	} || {
+
+		count=${#POSSIBLE[@]};
+
+		(( count )) && {
+			for w in "${POSSIBLE[@]}"; do echo "${w}"; done
+			exit $count;
+		}
+
+		exit 1;
+
+	}
+}
+
+ignored() { grep -qx "$1"'/\*' .gitignore; }
+
+ignore() {
+	ignore="src/include/$1/*";
+	ignored "src/include/$1" || echo "$ignore" >> .gitignore
+	git commit -m "Added external header reference link" .gitignore
+}
+
+devlink.rm() {
+
+	link="src/include/$1";
+
+	[[ -L "$link" ]] || {
+		echo "$0: error: $1 is not a symbolic link" >&2;
+		exit 2;
+	}
+
+	rm -v "$link";
+	content="`grep -vx "$link"'/\*' .gitignore`";
+	echo "$content" > .gitignore;
+	git commit -m "Removed external header reference link" .gitignore
+
+}
+
+devlink.add() {
+	link="src/include/$1";
+	[[ -e "$link" ]] && {
+		echo "$0: error: $1: path already exists" >&2;
+		return 2;
+	}
+	path=`includepath "$1"`;
+	ln -vst src/include "$path";
+	ignore "$1";
+}
+
+devlink=devlink.add;
+
+[[ $1 =~ (--rm|--remove|--undo|--delete) ]] && { devlink=devlink.rm; shift; }
+
+[[ $1 =~ (--list) ]] && {
+	files=(src/include/*);
+	for file in "${files[@]}"; do
+		[[ -L "$file" ]] && echo "$file";
+	done;
+	exit;
+}
+
+for provider; do
+	$devlink "$provider";
+done
