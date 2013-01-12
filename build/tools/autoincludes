@@ -4,7 +4,7 @@
 
 # script to generate list of required automatic files
 
-files=($(find . -type f -wholename '*.js'));
+files=($(find src -type f -wholename '*.js'));
 
 for file in "${files[@]}"; do
 	echo "${file%%.js*}.inc";

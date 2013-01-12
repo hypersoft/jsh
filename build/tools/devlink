@@ -39,10 +39,10 @@ includepath() {
 	}
 }
 
-ignored() { grep -qx "$1"'/\*' .gitignore; }
+ignored() { grep -qx "$1"'\*' .gitignore; }
 
 ignore() {
-	ignore="src/include/$1/*";
+	ignore="src/include/$1*";
 	ignored "src/include/$1" || echo "$ignore" >> .gitignore
 	git commit -m "Added external header reference link" .gitignore
 }
@@ -57,7 +57,7 @@ devlink.rm() {
 	}
 
 	rm -v "$link";
-	content="`grep -vx "$link"'/\*' .gitignore`";
+	content="`grep -vx "$link"'\*' .gitignore`";
 	echo "$content" > .gitignore;
 	git commit -m "Removed external header reference link" .gitignore
 

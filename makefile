@@ -11,7 +11,7 @@ OPTIMIZE := -O3 -march=native -mtune=generic
 
 DYNCALL := src/include/dyncall
 AUTO_INCLUDES := $(shell build/tools/autoincludes)
-REQUIRES := ${DYNCALL} ${AUTO_INCLUDES} $(shell find . -type f -wholename '*.c' -o -wholename '*.h' -o -wholename '*.js' -o -wholename '*.inc') 
+REQUIRES := ${DYNCALL} ${AUTO_INCLUDES} $(shell find src -type f -wholename '*.c' -o -wholename '*.h' -o -wholename '*.js' -o -wholename '*.inc') 
 
 all: ${APPLICATION}
 

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Copyright 2013, Triston J. Taylor
+
+# Exits success if single path found...
+# Exits N errors for N files find
+
+# Always reports found file(s) on stdout
+
+POSSIBLE=($(find /usr -type f -wholename '*'"$1" 2>/dev/null));
+
+(( ${#POSSIBLE[@]} == 1 )) && {
+	
+	echo "${POSSIBLE[0]}"
+
+} || {
+
+	count=${#POSSIBLE[@]};
+
+	(( count )) && {
+		for w in "${POSSIBLE[@]}"; do echo "${w}"; done
+		exit $count;
+	}
+
+	exit 1;
+
+}
