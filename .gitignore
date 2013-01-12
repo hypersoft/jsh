@@ -2,5 +2,3 @@ bin/*
 src/js/*.inc
 src/include/dyncall/*
 src/include/seed-gtk3/*
-src/include/JavaScriptCore*
-src/include/seed-gtk3*
