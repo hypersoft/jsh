@@ -10,6 +10,7 @@ This work makes use of several external technologies. All works are licensed
 with written consent from each respective author or entity.
 
 WebKitGtk+ JavaScriptCore Copyright (C) 2006-2012
+
 Dyncall Symbol Loader Library Copyright (C) 2007-2012
 
 License
