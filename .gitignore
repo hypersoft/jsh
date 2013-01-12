@@ -3,3 +3,4 @@ src/js/*.inc
 src/include/dyncall/*
 src/include/JavaScriptCore*
 src/include/seed-gtk3*
+src/include/contributors.inc
