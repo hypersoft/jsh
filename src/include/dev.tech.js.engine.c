@@ -13,6 +13,8 @@
 #include "dyncall/dyncall.h"
 #include "dyncall/dynload.h"
 #include "dyncall/dyncall_signature.h"
+#include "dyncall/license.inc"
 
 #include "webkitgtk-js-unified.c"
 
+#include "contributors.inc"
