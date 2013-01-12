@@ -1,8 +1,3 @@
-Contributors
-============
-
-Copyright (C) 2013, Triston J. Taylor
-
 Core Technology
 ===============
 
@@ -12,6 +7,11 @@ with written consent from each respective author or entity.
 WebKitGtk+ JavaScriptCore Copyright (C) 2006-2012
 
 Dyncall Symbol Loader Library Copyright (C) 2007-2012
+
+Contributors
+============
+
+Copyright (C) 2013, Triston J. Taylor
 
 License
 =======
