@@ -23,14 +23,16 @@ ${DYNCALL}:
 	@build/tools/dynhacker
 	@echo ''
 
-src/js/common.inc: src/js/common.js
+src/include/js/common.inc: src/include/js/common.js
 	@echo Building include file $@ ...
-	build/tools/bin2inc js_common_source src/js/common.js > $@
+	build/tools/bin2inc js_common_source src/include/js/common.js > $@
+	@echo '#include "common/main.c"' >> $@
 	@echo ''
 
-src/js/core.inc: src/js/core.js
+src/include/js/core.inc: src/include/js/core.js
 	@echo Building include file $@ ...
-	build/tools/bin2inc js_core_source src/js/core.js > $@
+	build/tools/bin2inc js_core_source src/include/js/core.js > $@
+	@echo '#include "core/main.c"' >> $@
 	@echo ''
 
 src/include/contributors.inc: share/docs/LICENSE/Hypersoft-Contributary.md
@@ -38,10 +40,9 @@ src/include/contributors.inc: share/docs/LICENSE/Hypersoft-Contributary.md
 	build/tools/bin2inc help_license_contributors share/docs/LICENSE/Hypersoft-Contributary.md > src/include/contributors.inc
 	@echo ''
 
-contributors: src/include/contributors.inc
 
 # This rule builds jsh
-${APPLICATION}: ${SOURCE} ${REQUIRES} contributors
+${APPLICATION}: ${SOURCE} ${REQUIRES} src/include/contributors.inc
 	@echo 'Validating required packages...'
 	@pkg-config --print-errors --exists ${PKGS}
 	@echo ''
